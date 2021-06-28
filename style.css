@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+#menu {
+    background-color: black;
+    display: flex;
+    place-content: center;
+}
+
+#search {
+    margin: 15px;
+    padding: 7px 12px;
+    border-radius: 15px;
+}
+
+#search-icon {
+    position: absolute;
+    left: 57.9%;
+    top: 25px;
+    cursor: pointer;
+    color: black
+}
+
+#countries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    color: white;
+}
+
+.about-country {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5px;
+    background-color: rgba(34, 34, 34, 0.481);
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+
+.country-logo {
+    margin-bottom: 10px;
+    height: 30vh;
+    overflow: hidden;
+    width: 100%;
+}
