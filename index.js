@@ -1,4 +1,6 @@
-let countries = document.getElementById("countries")
+let countries = document.getElementById("countries");
+let searchClick = document.getElementById("search-icon");
+let search = document.getElementById("search")
 let objectList = [];
 fetch("https://restcountries.eu/rest/v2/all")
 .then(res => res.json())
@@ -17,9 +19,7 @@ fetch("https://restcountries.eu/rest/v2/all")
 }).then(objList=> {
     objList.forEach((product)=> {
         createObject(product,countries)
-    // console.log(product);
     })
-    // console.log(objList);
 });
 
 
@@ -48,4 +48,12 @@ function getLanguages(arr) {
 }
 
 
-// createObject(productObject)
+searchClick.addEventListener('click', () => {
+    let searchName = search.value;
+    countries.innerHTML = ""
+    let searchObjectList = objectList.filter(item => item.name.includes(searchName.trim()))
+    searchObjectList.forEach((product)=> {
+        createObject(product , countries)
+    })
+})
+
